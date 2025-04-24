@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accelerated Wealth Formula</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .logo-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-title img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .logo-title span {
+      font-weight: 700;
+      font-size: 21px;
+      font-family: telegrafica;
+    }
+
+    header h1 {
+      font-size: 64px;
+      font-weight: 700;
+      font-family: telegrafica;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1em;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .hero-image img {
+      width: auto;
+      height: auto;
+    }
+
+    .about-us {
+      background: linear-gradient(to right, #800080, #0000ff);
+      color: white;
+      padding: 60px 20px;
+    }
+    
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .about-text p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .products {
+      background-color: #f66ed0;
+      color: black;
+      padding: 60px 20px;
+    }
+
+    .products h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      color: black;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 170px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-card hr {
+      size: 2px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin-top: 0;
+      font-size: larger;
+    }
+
+    .price {
+      color: #a6b208;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .product-card ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .buy-btn {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .affiliate-section {
+      background-color: #111;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .affiliate-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .affiliate-text h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .affiliate-text p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .affiliate-btn {
+      display: inline-block;
+      background-color: #f66ed0;
+      color: black;
+      padding: 12px 25px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .affiliate-btn:hover {
+      background-color: #e85cc0;
+    }
+
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .roller-image {
+      size: auto;
+    }
+    
+    .footer-right {
+      flex: 1;
+      text-align: left;
+      padding-left: 50px;
+      max-width: 600px;
+      margin: 70px;
+    }
+
+    .footer-logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .footer-logo-title img {
+      width: 30px;
+    }
+
+    .footer-logo-title span {
+      font-weight: 700;
+      font-size: 21px;
+      font-family: telegrafica;
+      text-align: center;
+    }
+    
+    .footer-right h3 {
+      margin: 50px;
+      font-size: 36px;
+      font-family: telegrafica;
+      text-align: center;
+    }
+    
+    .footer-right p {
+      margin: 0 0 15px;
+      font-size: 16px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+      font-size: 1.5em;
+    }
+
+    .footer-right img, span {
+      top: 10px;
+    }
+
+
+    .socials i {
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .product-card img {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="accelerated_wealth_formula.png" alt="Logo Icon" />
+      <span>Accelerated Wealth Formula</span>
+    </div>
+    <h1>Innovating and Providing People's Needs</h1>
+    <p>Flow into growth with Accelerated Wealth Formula</p>
+  </header>
+
+  <div class="hero-image">
+    <img src="image1.png" alt="Hero Illustration" width="300" />
+  </div>
+
+  <section class="about-us">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          At Accelerated Wealth Formula, our mission is to simplify success for everyone.
+          We empower individuals and businesses to grow faster by providing innovative solutions,
+          practical tools, and strategic guidance that actually work.
+        </p>
+        <p>
+          Whether you're just getting started or looking to scale up, we're here to help you
+          achieve your goals. Faster and smarter.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="accelerated_wealth_formula.png" alt="About Us Image" />
+      </div>
+    </div>
+  </section>  
+
+  <section class="products">
+    <h2>Products</h2>
+    <div class="product-card">
+      <img src="ebook1.png" alt="Product Image" />
+      <div class="product-info">
+        <div class="product-title">Secrets on Getting RICH: Rich People
+          Are Doing This! [Ebook]</div>
+        <div class="price">$11.99</div>
+        <hr>
+        <p>Unlock the Secrets to Wealth with Proven Strategies Rich People Use</p>
+        <ul>
+          <li>Master the mindset that attracts wealth and abundance</li>
+          <li>Leverage multiple income streams to grow your wealth</li>
+          <li>Use smart investing techniques the wealthy swear by</li>
+          <li>Build habits that ensure long-term financial success</li>
+        </ul>
+        <a href="https://accelewealthformula.gumroad.com/l/secretsongettingrich" class="buy-btn">BUY NOW!</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="viddaura.png" alt="Product Image" />
+      <div class="product-info">
+        <div class="product-title">Viddaura: Video Bundle</div>
+        <div class="price">$6.99</div>
+        <hr>
+        <p>Access Resellable Videos with Full Freedom to Rebrand and Post</p>
+        <ul>
+          <li>Free Download high-quality, non-copyrighted video content</li>
+          <li>Resell or repost without copyright strikes</li>
+          <li>Freely add your own branding or logo</li>
+          <li>Use for marketing, social media, YouTube, and more</li>
+        </ul>
+        <a href="https://accelewealthformula.gumroad.com/l/viddaura" class="buy-btn">BUY NOW!</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="affiliate-section">
+    <div class="affiliate-container">
+      <div class="affiliate-text">
+        <h2>Affiliate Program</h2>
+        <p>
+          Earn with us by sharing the Accelerated Wealth Formula Products. Our affiliate program
+          lets you generate income simply by promoting our products.
+          You will earn <bold>40% commision</bold> on every sale under your affiliate link.
+          It's free to join, easy to manage, and packed with potential.
+        </p>
+        <a href="https://accelewealthformula.gumroad.com/affiliates" class="affiliate-btn">Join Now!</a>
+      </div>
+    </div>
+  </section>  
+
+  <footer>
+    <div class="footer-content">
+      <img src="image2.png" alt="Rollerblading person" class="roller-image" />
+  
+      <div class="footer-right">
+        <div class="footer-logo-title">
+          <img src="accelerated_wealth_formula.png" alt="Logo Icon" />
+          <span>Accelerated Wealth Formula</span>
+        </div>
+        <br>
+        <h3>Innovate with us</h3>
+        <br>
+        <p>Automate and simplify your business operations with easy and secure solutions</p>
+        <div class="socials">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-tiktok"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+  <!-- FontAwesome for Social Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
